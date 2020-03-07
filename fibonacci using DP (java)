@@ -1,0 +1,12 @@
+public static int fib(int n, int memo[]) {
+        int result;
+        if(memo[n] != 0){
+            result = memo[n];
+        }else if(n==1 || n==2){
+            result = 1;
+        }else{
+            result = fib(n-1, memo)+fib(n-2, memo);
+            memo[n] = result;
+        }
+        return result;
+    }
